@@ -11,7 +11,7 @@ public abstract class DataBase {
         employeeList.add(new Employee(2, "Mike", 28, 8000));
         employeeList.add(new Employee(3, "Henry", 26, 9000));
         employeeList.add(new Employee(4, "Jack", 24, 6500));
-        employeeList.add(new Employee(5, "Sherry", 23, 5500));
+        employeeList.add(new Employee(5, "Sherry", 20, 5500));
     }
 
     List<List<Employee>> flatMapList = new ArrayList<>();
