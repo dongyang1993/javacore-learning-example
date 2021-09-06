@@ -30,6 +30,7 @@
         <module>zookeeper</module>
         <module>jdk11</module>
         <module>json</module>
+        <module>jackson</module>
     </modules>
 
     <dependencies>
