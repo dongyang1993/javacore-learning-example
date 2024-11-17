@@ -1,4 +1,4 @@
-package org.core.current.thread;
+package org.core.juc.thread;
 
 import org.junit.jupiter.api.Test;
 

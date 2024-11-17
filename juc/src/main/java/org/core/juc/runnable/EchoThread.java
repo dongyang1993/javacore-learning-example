@@ -1,7 +1,6 @@
-package org.core.current.thread;
+package org.core.juc.runnable;
 
-public class EchoThread extends Thread {
-
+public class EchoThread implements Runnable {
     @Override
     public void run() {
         System.out.println(Thread.currentThread().getName());

@@ -1,4 +1,4 @@
-package org.core.current.threadpool;
+package org.core.juc.threadpool;
 
 import java.util.concurrent.*;
 

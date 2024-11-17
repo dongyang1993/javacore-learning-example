@@ -1,4 +1,4 @@
-package org.core.current.future;
+package org.core.juc.future;
 
 import org.junit.jupiter.api.Test;
 

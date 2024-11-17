@@ -26,7 +26,7 @@
         <module>nio</module>
         <module>socket</module>
         <module>time</module>
-        <module>current</module>
+        <module>juc</module>
         <module>zookeeper</module>
         <module>jdk11</module>
         <module>json</module>

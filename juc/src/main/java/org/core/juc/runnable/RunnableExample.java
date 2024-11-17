@@ -1,8 +1,6 @@
-package org.core.current.runnable;
+package org.core.juc.runnable;
 
 import org.junit.jupiter.api.Test;
-
-import java.time.LocalDateTime;
 
 public class RunnableExample {
 
