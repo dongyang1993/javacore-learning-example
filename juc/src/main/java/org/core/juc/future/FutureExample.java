@@ -64,4 +64,25 @@ public class FutureExample {
         new Thread(futureTask).start();
         System.out.println(futureTask.get());
     }
+
+    @Test
+    public void test4() throws ExecutionException, InterruptedException {
+        ExecutorService threadPool = Executors.newFixedThreadPool(3);
+        FutureTask<String> futureTask = new FutureTask<>(() -> {
+            TimeUnit.SECONDS.sleep(3);
+            return "Are You Okay";
+        });
+        threadPool.submit(futureTask);
+        System.out.println(futureTask.get());
+    }
+
+    @Test
+    public void test5() throws ExecutionException, InterruptedException {
+        FutureTask<String> futureTask = new FutureTask<>(() -> {
+            TimeUnit.SECONDS.sleep(3);
+            return "Are You Okay";
+        });
+        new Thread(futureTask).start();
+        System.out.println(futureTask.get());
+    }
 }
