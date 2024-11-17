@@ -1,4 +1,4 @@
-package org.core.jdk11;
+package org.core.http.httpclient;
 
 import org.junit.jupiter.api.Test;
 

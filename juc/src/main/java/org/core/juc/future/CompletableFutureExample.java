@@ -30,6 +30,11 @@ public class CompletableFutureExample {
         System.out.println(future.get());
     }
 
+    /**
+     * runAsync无返回值
+     * @throws ExecutionException
+     * @throws InterruptedException
+     */
     @Test
     public void test2() throws ExecutionException, InterruptedException {
         CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
@@ -41,6 +46,6 @@ public class CompletableFutureExample {
             }
         });
         System.out.println("方法调用完成");
-        future.get();
+        System.out.println(future.get());;
     }
 }
