@@ -28,9 +28,9 @@
         <module>time</module>
         <module>juc</module>
         <module>zookeeper</module>
-        <module>jdk11</module>
         <module>json</module>
         <module>script</module>
+        <module>feature</module>
     </modules>
 
     <dependencies>
