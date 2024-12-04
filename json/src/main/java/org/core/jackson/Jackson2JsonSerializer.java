@@ -10,6 +10,7 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 public class Jackson2JsonSerializer {
     private final ObjectMapper mapper = new ObjectMapper();
+    private static final byte[] EMPTY_ARRAY = new byte[0];
 
     {
         // 启用默认类型,将类信息写入@class属性
@@ -22,7 +23,7 @@ public class Jackson2JsonSerializer {
 
     public byte[] serialize(Object obj) {
         if (obj == null) {
-            return new byte[0];
+            return EMPTY_ARRAY;
         } else {
             try {
                 return mapper.writeValueAsBytes(obj);

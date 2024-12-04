@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.Arrays;
 
 public class Order {
@@ -23,6 +24,10 @@ public class Order {
     @JsonProperty("type")
 //    @JsonIgnore
     private PayEnum payType;
+
+    private String privateProperty;
+
+    private LocalDateTime createTime;
 
     public Order() {
     }
@@ -92,5 +97,17 @@ public class Order {
     @JsonSetter("OL")
     public void setPayTypeJSON(String payType) {
         this.payType = Arrays.stream(PayEnum.values()).filter(n -> n.getName().equals(payType)).findAny().orElse(null);
+    }
+
+    public void setPrivateProperty(String privateProperty) {
+        this.privateProperty = privateProperty;
+    }
+
+    public LocalDateTime getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(LocalDateTime createTime) {
+        this.createTime = createTime;
     }
 }
