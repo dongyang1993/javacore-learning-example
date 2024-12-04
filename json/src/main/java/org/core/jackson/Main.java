@@ -8,6 +8,8 @@ import com.fasterxml.jackson.databind.jsontype.impl.LaissezFaireSubTypeValidator
 import org.core.bean.Order;
 import org.core.bean.PayEnum;
 
+import java.nio.charset.StandardCharsets;
+
 public class Main {
     private static final ObjectMapper mapper = new ObjectMapper();
 
@@ -19,13 +21,14 @@ public class Main {
     }
 
     public static void main(String[] args) throws Exception {
+        Jackson2JsonSerializer serializer = new Jackson2JsonSerializer();
         Order order = new Order();
         order.setName("订单1号");
         order.setPayType(PayEnum.AliPay);
-        String json = Jackson2JsonSerializer.serialize(order);
-        System.out.println(json);
+        byte[] bytes = serializer.serialize(order);
+        System.out.println(new String(bytes, StandardCharsets.UTF_8));
 
-        Order pp = Jackson2JsonSerializer.deserialize(json);
+        Order pp = serializer.deserialize(bytes);
         System.out.println("");
     }
 
